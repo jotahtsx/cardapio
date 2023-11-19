@@ -1,5 +1,7 @@
 package com.jotahdev.cardapio.entities;
 
+import com.jotahdev.cardapio.dto.FoodCreateDto;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -23,4 +25,12 @@ public class Food {
     private String title;
     private String image;
     private Integer price;
+
+    public Food(FoodCreateDto data) {
+        this.image = data.image();
+        this.price = data.price();
+        this.title = data.title();
+    }
 }
+
+
