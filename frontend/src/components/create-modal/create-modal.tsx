@@ -48,8 +48,8 @@ export function CreateModal({closeModal}: ModalProps) {
 
     return (
         <div>
-            <div className="modal-overlay">
-                <div className="modal-body">
+            <div className="modal-overlay" onClick={() => {closeModal()}}>
+                <div className="modal-body" onClick={e => {e.stopPropagation()}}>
                     <h2>Cadastre uma nova comida no cardápio</h2>
                     <form className="input-container">
                         <Input label="Título" value={title} updateValue={setTitle} />
