@@ -17,7 +17,7 @@ body, button, input {
 }
 
 .container .create-food {
-  background-color: #d63031;
+  background-color: #192a56;
   color: white;
   font-weight: bold;
   position: fixed;
@@ -30,4 +30,11 @@ body, button, input {
 .container .create-food:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 0px;
   transform: scale(1.2);
+}
+
+.create-food {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  cursor: pointer;
 }

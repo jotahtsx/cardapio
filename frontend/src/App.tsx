@@ -22,7 +22,11 @@ function App() {
           {data?.map(fooData => <Card price={fooData.price} title={fooData.title} image={fooData.image} />)}
         </div>
         {isModalOpen && <CreateModal closeModal={handleOpenModal} />}
-        <button className='create-food' onClick={handleOpenModal}>novo</button>
+        <button className='create-food' onClick={handleOpenModal}>
+        <span className="material-symbols-outlined">
+          add
+        </span>
+        </button>
       </div>
     </>
   )

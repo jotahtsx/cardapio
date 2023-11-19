@@ -27,17 +27,17 @@
 
 .modal-overlay .modal-body .btn-close {
     position: absolute;
-    top: -25px;
-    right: -25px;
+    top: -20px;
+    right: -20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
     border: none;
     z-index: 100;
-    background-color: #e32929;
+    background-color: #487eb0;
     cursor: pointer;
 }
 
@@ -68,7 +68,7 @@
 
 .modal-overlay .modal-body input:focus {
     outline: none;
-    border-color: #273c75;
+    border-color: #192a56;
 }
 
 .modal-overlay .modal-body label {
@@ -82,7 +82,7 @@
     width: 100%;
     margin-top: 10px;
     border: none;
-    background-color: #4cd137;
+    background-color: #192a56;
     padding: 18px;
     border-radius: 8px;
     color: white;
@@ -94,7 +94,7 @@
 }
 
 .modal-overlay .modal-body .btn-store:hover {
-    background-color: #44bd32;
+    background-color: #273c75;
     transform: scale(1);
     cursor: pointer;
 }

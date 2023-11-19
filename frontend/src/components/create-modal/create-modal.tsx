@@ -46,6 +46,20 @@ export function CreateModal({closeModal}: ModalProps) {
             closeModal();
     }, [isSuccess])
 
+    useEffect(() => {
+        const handleEsc = (event: KeyboardEvent) => {
+          if (event.key === "Escape") {
+            closeModal();
+          }
+        };
+    
+        document.addEventListener("keydown", handleEsc);
+    
+        return () => {
+          document.removeEventListener("keydown", handleEsc);
+        };
+      }, [closeModal]);
+
     return (
         <div>
             <div className="modal-overlay" onClick={() => {closeModal()}}>
