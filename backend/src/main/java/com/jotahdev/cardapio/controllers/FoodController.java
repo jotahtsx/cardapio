@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
-import com.jotahdev.cardapio.entities.Food;
+import com.jotahdev.cardapio.dto.FooDto;
 import com.jotahdev.cardapio.repositories.FoodRepository;
 
 @RestController
@@ -19,9 +18,9 @@ public class FoodController {
     private FoodRepository repository;
 
     @GetMapping
-    public List<Food> getAll() {
+    public List<FooDto> getAll() {
         
-        List<Food> foodList = repository.findAll();
+        List<FooDto> foodList = repository.findAll().stream().map(FooDto::new).toList();
         return foodList;
 
     }
