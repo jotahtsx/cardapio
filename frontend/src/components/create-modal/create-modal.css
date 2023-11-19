@@ -1,0 +1,100 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.94);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999;
+}
+
+.modal-overlay .modal-body {
+    background-color: white;
+    padding: 30px;
+    width: 360px;
+    border-radius: 24px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.modal-overlay .modal-body .btn-close {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    z-index: 100;
+    background-color: #e32929;
+    cursor: pointer;
+}
+
+.modal-overlay .modal-body .btn-close span {
+    color: white;
+}
+
+.modal-overlay .modal-body h2 {
+    font-size: 32px;
+}
+
+.modal-overlay .modal-body .input-container {
+    width: calc(100% - 24px);
+}
+
+.modal-overlay .modal-body input {
+    padding: 8px;
+    border: 2px solid #c6c5c5c5;
+    transition: all 1s ease-in-out;
+    color: rgba(0,0,0,0.9);
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.modal-overlay .modal-body input:focus {
+    outline: none;
+    border-color: #ff611d;
+}
+
+.modal-overlay .modal-body label {
+    color: #242424;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.modal-overlay .modal-body .btn-store {
+    position: initial;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    background-color: #4cd137;
+    padding: 18px;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    transition: ease 600ms;
+    text-shadow: 1px 1px rgba(0,0,0,.5);
+    text-transform: uppercase;
+}
+
+.modal-overlay .modal-body .btn-store:hover {
+    background-color: #44bd32;
+    transform: scale(1);
+    cursor: pointer;
+}
